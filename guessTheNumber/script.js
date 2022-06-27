@@ -1,4 +1,4 @@
-let secretNumber = 50;
+let secretNumber = Math.round(Math.random()*100);
 let playerGuess = 0;
 let guessesRemaining = 10;
 let guessesTaken = 0;
@@ -60,6 +60,14 @@ function endGame(){
   else{
     output.innerHTML = `No more guesses left!<br> The number was ${secretNumber}.`
   }
+
+  button.removeEventListener("click", clickHandler, false);
+  button.disabled = true;
+
+  window.removeEventListener("keydown", keydownHanlder, false);
+
+  input.disabled = true;
+
 }
 
 function validateInput(){
