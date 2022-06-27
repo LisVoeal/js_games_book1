@@ -60,6 +60,8 @@ h1{
   position: absolute;
   top: 270px;
   left: 140px;
+
+  transition: .1s;
 }
 
 #alien{
