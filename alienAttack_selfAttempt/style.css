@@ -99,6 +99,10 @@ h1{
   display: none;
 }
 
+.game-data{
+  z-index: 1000;
+}
+
 .game-controller{
   margin-top: 10px;
 }
