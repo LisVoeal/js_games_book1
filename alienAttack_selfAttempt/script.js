@@ -36,6 +36,9 @@ function validateInput(){
   else if(guessX > 300 || guessY > 300){
     output.innerHTML = `Please enter a number that is less than 300`;
   }
+  else if(guessX < 0 || guessY < 0){
+    output.innerHTML = `Your guess should be higher than 0`;
+  }
   else{
     playGame();
   }
