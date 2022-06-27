@@ -16,8 +16,11 @@ let output = document.querySelector("#output");
 let inputX = document.querySelector("#inputX");
 let inputY = document.querySelector("#inputY");
 
-let button = document.querySelector("button");
-button.addEventListener("click", clickHandler);
+let fire_button = document.querySelector("#fire");
+fire_button.addEventListener("click", clickHandler);
+
+let restart_button = document.querySelector("#restart_button");
+restart_button.addEventListener("click", restart);
 
 function clickHandler(){
   validateInput();
@@ -82,7 +85,7 @@ function render(){
 }
 
 function endGame(){
-  button.disabled = true;
+  fire_button.disabled = true;
   inputX.disabled = true;
   inputY.disabled = true;
 
@@ -92,4 +95,21 @@ function endGame(){
   else{
     output.innerHTML = `You lost. Aliens have invaded the earth...`;
   }
+}
+
+function restart(){
+ shotsMade = 0;
+ shotsLeft = 12;
+ guessX = 0;
+ guessY = 0;
+ alienX = Math.round(Math.random() * 280);
+ alienY = 0;
+ gameState = "";
+ haveWon = false;
+
+ output.innerHTML = 'Enter X and Y position below and press FIRE!...';
+
+ fire_button.disabled = false;
+ inputX.disabled = false;
+ inputY.disabled = false;
 }

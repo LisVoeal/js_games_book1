@@ -24,7 +24,7 @@ body{
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 
 h1{
@@ -134,4 +134,14 @@ button{
   background: orange;
 
   font-family: 'EmuLogic', sans-serif;
+}
+
+#restart_button{
+  padding: 0;
+}
+
+@media(max-width: 1500px){
+  #stage{
+    transform: scale(1.5);
+  }
 }
