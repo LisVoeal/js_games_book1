@@ -1,0 +1,130 @@
+@font-face {
+  font-family: "EmuLogic";
+  src: url("./fonts/emulogic.ttf");
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: "EmuLogic", sans-serif;
+  width: 100vw;
+  height: 100vh;
+
+  background: green;
+}
+
+.container{
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+h1{
+  color: yellow;
+  text-shadow: 2px 2px 1px greenyellow;
+}
+
+#stage{
+  transform: scale(2);
+}
+
+#stage{
+  position: relative;
+  border-radius: 5px;
+  border: 1px solid green;
+  overflow: hidden;
+  box-shadow: 2px 2px 4px black;
+}
+
+#screen{
+  background: url(./images/background.png);
+  
+  width: 300px;
+  height: 300px;
+}
+
+#cannon{
+  background: url(./images/cannon.png);
+
+  width: 20px;
+  height: 20px;
+
+  position: absolute;
+  top: 270px;
+  left: 140px;
+}
+
+#alien{
+  background: url(./images/alien.png);
+
+  width: 20px;
+  height: 20px;
+
+  position: absolute;
+  top: 130px;
+  left: 130px;
+}
+
+#missile{
+  background: url(./images/missile.png);
+
+  width: 10px;
+  height: 10px;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+#explosion{
+  background: url(./images/explosion.png);
+
+  width: 20px;
+  height: 20px;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  display: none;
+}
+
+.game-controller{
+  margin-top: 10px;
+}
+
+input{
+  border: green;
+  background: black;
+  color: orange;
+  font-size: 16px;
+  padding: 10px;
+  text-align: center;
+
+  font-family: 'EmuLogic', sans-serif;
+}
+
+#output{
+  text-align: center;
+}
+
+button{
+  font-size: 24px;
+  padding: 10px 20px;
+  text-align: center;
+  text-transform: uppercase;
+  color: black;
+  border: 1px solid greenyellow;
+  border-radius: 5px;
+  background: orange;
+
+  font-family: 'EmuLogic', sans-serif;
+}
