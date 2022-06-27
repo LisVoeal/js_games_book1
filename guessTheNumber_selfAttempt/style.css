@@ -76,3 +76,6 @@ body{
   background-color: lightgray;
 }
 
+#arrow{
+  transition: .5s;
+}
