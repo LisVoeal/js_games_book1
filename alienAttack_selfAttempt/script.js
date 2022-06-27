@@ -69,12 +69,21 @@ function render(){
   alienX = Math.round(Math.random() * 280);
   alienY += 20;
 
+  if(guessX > 299){
+    missile.style.left = `${guessX-20}px`;
+  }
+
   if(haveWon){
     missile.style.left = `${guessX}px`;
     missile.style.top = `${guessY}px`;
+    
     explosion.style.display = 'block';
+    explosion.style.left = `${guessX}px`;
+    explosion.style.top = `${guessY}px`;
 
     cannon.style.left = `${guessX}px`;
+
+    alien.style.display = 'none';
   }
   else{
     alien.style.left = `${alienX}px`;
@@ -93,7 +102,12 @@ function endGame(){
   inputY.disabled = true;
 
   if(haveWon){
-    output.innerHTML = `You won! It took you ${shotsMade} shots!`;
+    if(shotsMade === 1){
+      output.innerHTML = `You won! It took you ${shotsMade} shot!`;
+    }
+    else{
+      output.innerHTML = `You won! It took you ${shotsMade} shots!`;
+    } 
   }
   else{
     output.innerHTML = `You lost. Aliens have invaded the earth...`;
@@ -103,12 +117,14 @@ function endGame(){
 function restart(){
  shotsMade = 0;
  shotsLeft = 12;
- guessX = 0;
- guessY = 0;
+ guessX = '130px';
+ guessY = '280px';
  alienX = Math.round(Math.random() * 280);
  alienY = 0;
  gameState = "";
  haveWon = false;
+
+ render();
 
  output.innerHTML = 'Enter X and Y position below and press FIRE!...';
 
