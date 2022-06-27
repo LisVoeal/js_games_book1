@@ -1,0 +1,24 @@
+#button{
+  color: white;
+  background-color: darkslategray;
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: 1px solid black;
+  text-transform: uppercase;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#button:active{
+  background-color: black;
+}
+
+#button:disabled{
+  background-color: lightgray;
+  border: none;
+}
+
+#input{
+  padding: 10px 20px;
+  text-align: center;
+}
