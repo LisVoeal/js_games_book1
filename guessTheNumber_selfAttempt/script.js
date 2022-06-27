@@ -20,7 +20,7 @@ function buttonClickHandler(){
 }
 
 function keydownHandler(event){
-  if(event.keydown === 13){
+  if(event.keyCode === 13){
     validateInput();
   }
 }
