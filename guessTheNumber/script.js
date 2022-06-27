@@ -14,6 +14,10 @@ button.addEventListener("click", clickHandler, false);
 
 window.addEventListener("keydown", keydownHanlder, false);
 
+function render(){
+  arrow.style.left = `${playerGuess * 3}px`;
+}
+
 function keydownHanlder(event){
   if(event.keyCode === 13){
     validateInput();
@@ -50,6 +54,8 @@ function playGame(){
     gameWon = true;
     endGame();
   }
+
+  render();
 }
 
 function endGame(){
