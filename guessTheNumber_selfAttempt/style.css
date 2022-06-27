@@ -20,6 +20,8 @@ body{
   position: relative;
   width: 300px;
   height: 33px;
+
+  transform: scale(1.5);
 }
 
 #scale{
