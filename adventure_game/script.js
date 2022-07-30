@@ -33,6 +33,8 @@ let output = document.querySelector("#output");
 let button = document.querySelector("#button");
 button.addEventListener("click", clickHandler);
 
+let image = document.querySelector("img");
+
 function clickHandler(){
   playGame();
 }
@@ -63,6 +65,8 @@ function playGame(){
 
 function render(){
   output.innerHTML = map[mapLocation];
+  image.src = `./images/${images[mapLocation]}`;
+
   output.innerHTML += `<br><em>${gameMessage}</em>`;
 }
 
